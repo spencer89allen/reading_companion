@@ -7,10 +7,10 @@ class Footer extends Component {
 
         return (
             <div>
-                <footer className="footer">
-                    <div className="content has-text-centered">
+                <footer class="footer">
+                    <div class="content has-text-centered">
                         <p>
-                            This is the Reading Companion's footer. Its not exactly done.
+                            Reading Companion Footer made with <strong>Bulma</strong>
                         </p>
                     </div>
                 </footer>
