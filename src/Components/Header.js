@@ -9,8 +9,11 @@ class Header extends Component {
             <div>
                 <nav class="navbar" role="navigation" aria-label="main navigation">
                     <div class="navbar-brand">
-                        <a class="navbar-item" >
-                            <strong>Book Club</strong>
+                        <a class="navbar-item" 
+                            href="#/">
+                            <div class="navbar-logo">
+                                Book Club
+                            </div>
                         </a>
                         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                             <span aria-hidden="true"></span>
@@ -20,8 +23,9 @@ class Header extends Component {
                     </div>
                     <div id="navbarBasicExample" class="navbar-menu">
                         <div class="navbar-start">
-                            <a class="navbar-item">
-                                Home
+                            <a class="navbar-item" 
+                                href="#/Library">
+                                Library
                             </a>
                             <a class="navbar-item">
                                 Documentation

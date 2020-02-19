@@ -15,10 +15,10 @@ class HomePage extends Component {
                     <div class="hero-body">
                         <div class="container">
                             <h1 class="title">
-                                Large title
+                                Home Page
                             </h1>
                             <h2 class="subtitle">
-                                Large subtitle
+                                Something will be here soon
                             </h2>
                         </div>
                     </div>

@@ -6,7 +6,7 @@ class Footer extends Component {
     render() {
 
         return (
-            <div>
+            <div className='container is-fluid'>
                 <footer class="footer">
                     <div class="content has-text-centered">
                         <p>
