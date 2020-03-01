@@ -36,7 +36,12 @@ class LibraryPage extends Component {
                                 <div class="media-content">
                                     <div class="content">
                                         <p>
-                                            <strong>User's Page</strong>
+                                            <strong>
+                                                <a class="navbar-item"
+                                                    href="#/userPage">
+                                                    User's Page
+                                                </a>
+                                            </strong>
                                             <br />
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
                                         </p>
