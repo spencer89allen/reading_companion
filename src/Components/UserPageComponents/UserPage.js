@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link, Switch, Route, Redirect } from 'react-router-dom';
+
 
 import "./UserPage.css"
+import BookTab from './UserComponents/BookTab/BookTab';
+import ProfileTab from './UserComponents/ProfileTab/ProfileTab';
+import AddABookTab from './UserComponents/AddABookTab/AddABookTab';
 
 class UserPage extends Component {
 
@@ -27,12 +32,36 @@ class UserPage extends Component {
                     <div class="container is-fluid">
                         <div class="tabs">
                             <ul>
-                                <li class="is-active"><a>Pictures</a></li>
-                                <li><a>Music</a></li>
-                                <li><a>Videos</a></li>
-                                <li><a>Documents</a></li>
+                                <li>
+                                    <Link to={`userPage/books`}>
+                                        <p>Books</p>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to={`userPage/profile`}>
+                                        <p>Profile</p>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to={`userPage/add_book`}>
+                                        <p>Add a Book</p>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <a>Documents</a>
+                                </li>
                             </ul>
                         </div>
+                    </div>
+                    <div>
+                        <Switch>
+                            <Route component={BookTab} exact path='userPage/books' />
+                            <Route component={ProfileTab} path='userPage/profile' />
+                            <Route component={AddABookTab} path='/add_book' />
+
+                            <Redirect to={`/userPage/books`}/>
+
+                        </Switch>
                     </div>
                 </section>
             </div>

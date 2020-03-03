@@ -27,9 +27,9 @@ class Header extends Component {
                                 href="#/Library">
                                 Library
                             </a>
-                            <a class="navbar-item">
+                            {/* <a class="navbar-item">
                                 Documentation
-                            </a>
+                            </a> */}
                             <div class="navbar-item has-dropdown is-hoverable">
                                 <a class="navbar-link">
                                     More
