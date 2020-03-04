@@ -14,50 +14,48 @@ class UserPage extends Component {
 
 
     render() {
+        console.log(this.props.match.url)
         return (
             <div>
-                <section class="hero is-medium is-primary is-warning">
-                    <div class="hero-body">
-                        <div class="container">
-                            <h1 class="title">
+                <section className="hero is-medium is-primary is-warning">
+                    <div className="hero-body">
+                        <div className="container">
+                            <h1 className="title">
                                 User's Page
                             </h1>
-                            <h2 class="subtitle">
+                            <h2 className="subtitle">
                                 It will be responsive at some point
                             </h2>
                         </div>
                     </div>
                 </section>
-                <section class="mainSection">
-                    <div class="container is-fluid">
-                        <div class="tabs">
+                <section className="mainSection">
+                    <div className="container is-fluid">
+                        <div className="tabs">
                             <ul>
                                 <li>
-                                    <Link to={`userPage/books`}>
+                                    <Link to={`${this.props.match.url}/books`}>
                                         <p>Books</p>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to={`userPage/profile`}>
+                                    <Link to={`${this.props.match.url}/profile`}>
                                         <p>Profile</p>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to={`userPage/add_book`}>
+                                    <Link to={`${this.props.match.url}/add_book`}>
                                         <p>Add a Book</p>
                                     </Link>
-                                </li>
-                                <li>
-                                    <a>Documents</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div>
                         <Switch>
-                            <Route component={BookTab} exact path='userPage/books' />
-                            <Route component={ProfileTab} path='userPage/profile' />
-                            <Route component={AddABookTab} path='/add_book' />
+                            <Route component={BookTab} exact path={`${this.props.match.url}/books`} />
+                            <Route component={ProfileTab} path={`${this.props.match.url}/profile`} />
+                            <Route component={AddABookTab} path={`${this.props.match.url}/add_book`} />
 
                             <Redirect to={`/userPage/books`}/>
 
